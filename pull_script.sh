@@ -1,4 +1,4 @@
-BRANCH=master # Environment variable for selecting branch ---> Initialized for demo purposes
+export BRANCH=master # Environment variable for selecting branch ---> Initialized for demo purposes
 cd ~
 git clone https://github.com/adityapai14/Sample-Node.git 2>/dev/null # For running first time
 cd ~/Sample-Node
