@@ -1,0 +1,20 @@
+version: "2.0"
+services:
+  web:
+    build: .
+    ports:
+      - "3030:3030"
+    volumes:
+      - ~/Sample_Mount/${BRANCH}:/usr/src/app
+    working_dir: /usr/src/app
+    command: node app.js
+    links:
+      - mongoDB
+
+  mongoDB:
+    image: mongo:latest
+    expose:
+      - "27017"
+    volumes:
+      - ./data:/data/db
+    restart: always
